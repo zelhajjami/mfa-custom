@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+repositories {
+    jcenter()
+}
+
+archivesBaseName = 'custom-mfa'
+version = '0.1'
+
+dependencies {
+compile 'org.json:json:20160810'
+compile "org.apereo.cas:cas-server-core-authentication:5.3.0"
+compile "org.apereo.cas:cas-server-core-webflow:5.3.0"
+compile "org.apereo.cas:cas-server-core-web:5.3.0"
+
+implementation 'org.springframework:spring-context:5.0.6.RELEASE'
+implementation 'org.springframework:spring-core:5.0.6.RELEASE'
+implementation 'org.springframework.webflow:spring-webflow:2.5.0.RELEASE'
+}
